@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ناصف | Nassef — عصائر طازجة وسموذي وآيس كريم</title>
+<meta name="description" content="ناصف: عصير قصب طازج، عصائر مصرية، سموذي وآيس كريم بأسعار في المتناول. شارع المدرية. Nassef: fresh juices, smoothies and ice cream at easy prices.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@500;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F5FFF0;          /* clean mint-white */
+    --lime:#C8F52D;
+    --leaf:#12A04A;        /* sugarcane / leaf green */
+    --forest:#0B3D20;      /* text + dark panels */
+    --strawberry:#E8174B;  /* karkadeh / strawberry */
+    --berry:#7B2FF7;       /* smoothies */
+    --orange:#FF7A1A;
+    --mango:#FFC21A;
+    --white:#FFFFFF;
+    --ar-display:"Reem Kufi","IBM Plex Sans Arabic",sans-serif;
+    --ar-body:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;
+    --en:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+    --shadow:0 18px 40px -20px rgba(11,61,32,.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--forest);font-family:var(--ar-body);font-size:1.05rem;line-height:1.8}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--strawberry);outline-offset:3px}
+  .en{direction:ltr;text-align:left;font-family:var(--en);font-size:.95rem;line-height:1.5}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 1.25rem}
+
+  /* header */
+  header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(11,61,32,.08)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:.55rem}
+  .logo{font-family:var(--ar-display);font-size:1.9rem;font-weight:700;text-decoration:none;color:var(--strawberry);line-height:1.2}
+  nav{display:flex;gap:.4rem;align-items:center}
+  nav a{text-decoration:none;font-weight:500;padding:.35rem .95rem;border-radius:999px;line-height:1.3;text-align:center}
+  nav a small{display:block;font-family:var(--en);font-size:.68rem;opacity:.65;direction:ltr}
+  nav a:hover{background:var(--lime)}
+  nav a.call{background:var(--forest);color:var(--lime)}
+  nav a.call:hover{background:var(--strawberry);color:#fff}
+
+  /* hero */
+  .hero{padding:1.2rem 0 0}
+  .hero-card{position:relative;overflow:hidden;border-radius:40px;color:var(--forest);
+    background:
+      radial-gradient(circle at 8% 105%,rgba(232,23,75,.55),transparent 42%),
+      radial-gradient(circle at 95% -10%,rgba(255,122,26,.5),transparent 40%),
+      linear-gradient(135deg,#C8F52D 0%,#FFE53D 60%,#FFC21A 100%);
+    display:grid;grid-template-columns:1.25fr .75fr;align-items:center;min-height:62vh;padding:3rem clamp(1.5rem,5vw,4rem)}
+  .hero h1{font-family:var(--ar-display);font-weight:700;font-size:clamp(5.5rem,20vw,13rem);line-height:1.05;color:var(--forest);animation:rise .9s ease-out both}
+  .hero .sub{font-size:clamp(1.15rem,2.6vw,1.6rem);font-weight:600;max-width:24ch;line-height:1.7;margin-top:.3rem}
+  .hero .en{margin-top:.8rem;max-width:36ch;font-size:1.02rem;font-weight:500}
+  .actions{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.6rem}
+  .btn{display:inline-block;padding:.7rem 1.7rem;border-radius:999px;font-family:var(--ar-display);font-weight:700;font-size:1.1rem;text-decoration:none;line-height:1.4;text-align:center}
+  .btn small{display:block;font-family:var(--en);font-weight:600;font-size:.72rem;line-height:1.2;direction:ltr}
+  .btn.primary{background:var(--strawberry);color:#fff;box-shadow:0 12px 26px -10px var(--strawberry)}
+  .btn.primary:hover{background:var(--forest)}
+  .btn.ghost{background:#fff;color:var(--forest)}
+  .btn.ghost:hover{background:var(--forest);color:var(--lime)}
+
+  /* hero art: sugarcane + citrus slices, all CSS */
+  .art{position:relative;height:100%;min-height:380px}
+  .cane{position:absolute;bottom:-60px;width:56px;height:125%;border-radius:28px;transform-origin:bottom center;
+    background:
+      repeating-linear-gradient(to bottom,transparent 0 118px,rgba(8,50,20,.45) 118px 122px,rgba(255,255,255,.25) 122px 126px),
+      linear-gradient(to right,#0E7A38 0%,#1FBF5B 40%,#6FE08C 52%,#12A04A 78%,#0A5F2B 100%);
+    box-shadow:0 24px 40px -20px rgba(8,50,20,.6)}
+  .cane:nth-of-type(1){right:4%;transform:rotate(-9deg)}
+  .cane:nth-of-type(2){right:38%;transform:rotate(3deg);height:138%;width:64px}
+  .cane:nth-of-type(3){right:70%;transform:rotate(12deg);height:112%}
+  .slice{position:absolute;border-radius:50%;box-shadow:0 16px 30px -12px rgba(0,0,0,.35)}
+  .slice::after{content:"";position:absolute;inset:42%;border-radius:50%;background:rgba(255,255,255,.85)}
+  .orange{width:150px;height:150px;top:6%;right:46%;border:9px solid #FF7A1A;
+    background:repeating-conic-gradient(#FFF1CF 0 3deg,#FF9A2E 3deg 30deg)}
+  .lime{width:104px;height:104px;bottom:14%;right:2%;border:7px solid #3FAE1C;
+    background:repeating-conic-gradient(#F4FFC9 0 3deg,#9BE23A 3deg 30deg)}
+  @keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+
+  /* section heads */
+  section.block{padding-block:3.5rem}
+  .head{margin-bottom:1.4rem}
+  .head h2{font-family:var(--ar-display);font-size:clamp(1.9rem,5vw,2.8rem);line-height:1.4}
+  .head .en{font-weight:600;opacity:.75;font-size:1rem}
+  .howto{display:inline-block;margin-top:.6rem;background:var(--lime);border-radius:999px;padding:.35rem 1.1rem;font-weight:600;font-size:.98rem}
+  .howto .en{display:inline;opacity:.75;margin-inline-start:.5rem;font-weight:500}
+
+  /* menu + order */
+  .menu{display:grid;grid-template-columns:repeat(2,1fr);gap:1.4rem;align-items:start}
+  .col{background:var(--white);border-radius:28px;box-shadow:var(--shadow);overflow:hidden}
+  .col h3{font-family:var(--ar-display);font-size:1.5rem;padding:.9rem 1.3rem .8rem;line-height:1.4;color:#fff}
+  .col h3 .en{display:block;font-family:var(--en);font-size:.85rem;font-weight:600;opacity:.92}
+  .cane-col h3{background:var(--leaf)}
+  .egy-col h3{background:var(--strawberry)}
+  .smo-col h3{background:linear-gradient(120deg,var(--berry),#B84DFF)}
+  .ice-col h3{background:var(--mango);color:var(--forest)}
+  .cols{display:grid;grid-template-columns:1fr 4.2rem 4rem;gap:.5rem;padding:.55rem 1.3rem .2rem;font-size:.78rem;font-weight:600;opacity:.65;line-height:1.3;text-align:center}
+  .cols span:first-child{text-align:start}
+  .cols .en{font-size:.68rem;text-align:center;display:block}
+  .items{padding:0 1.3rem 1.1rem}
+  .item{display:grid;grid-template-columns:1fr 4.2rem 4rem;gap:.5rem;align-items:center;padding:.6rem 0;border-top:1px solid rgba(11,61,32,.1);cursor:pointer}
+  .item b{display:block;font-weight:600;font-size:1.08rem;line-height:1.4}
+  .item .en{font-size:.82rem;opacity:.7;line-height:1.3}
+  .price{font-family:var(--ar-display);font-weight:700;font-size:1.3rem;color:var(--strawberry);text-align:center;line-height:1.1}
+  .price small{display:block;font-family:var(--ar-body);font-size:.68rem;font-weight:500;color:var(--forest);opacity:.7}
+  input,textarea{font:inherit;color:var(--forest);background:var(--bg);border:2px solid rgba(11,61,32,.12);border-radius:14px;padding:.5rem .8rem;width:100%}
+  input:hover,textarea:hover{border-color:rgba(11,61,32,.35)}
+  input[type=number]{text-align:center;padding:.45rem .2rem;font-weight:700;font-size:1.05rem}
+  .item:has(input:not(:placeholder-shown)){background:linear-gradient(to left,transparent,rgba(200,245,45,.45))}
+
+  /* delivery */
+  .delivery{margin-top:1.6rem;background:var(--forest);color:#fff;border-radius:28px;padding:1.8rem clamp(1.2rem,4vw,2.4rem);display:grid;grid-template-columns:1fr 1fr;gap:1.2rem 2rem;box-shadow:var(--shadow)}
+  .delivery h3{grid-column:1/-1;font-family:var(--ar-display);font-size:1.5rem;line-height:1.4;color:var(--lime)}
+  .delivery h3 .en{display:block;font-family:var(--en);font-size:.9rem;font-weight:600;color:#fff;opacity:.75}
+  label.field{display:block;font-weight:500}
+  label.field small{display:block;font-family:var(--en);font-size:.78rem;opacity:.7;direction:ltr;text-align:start;line-height:1.3;margin-bottom:.25rem}
+  label.field input,label.field textarea{margin-top:.2rem;background:#fff}
+  textarea{min-height:5.2rem;resize:vertical}
+  .full{grid-column:1/-1}
+  .send{font-family:var(--ar-display);font-weight:700;font-size:1.3rem;background:var(--lime);color:var(--forest);border:0;padding:.8rem 2.4rem;border-radius:999px;cursor:pointer;line-height:1.4}
+  .send small{display:block;font-family:var(--en);font-size:.78rem;font-weight:600;direction:ltr}
+  .send:hover{background:var(--mango)}
+  .fine{margin-top:.9rem;font-size:.92rem;opacity:.88;line-height:1.7}
+  .fine .en{display:block;margin-top:.15rem;font-size:.85rem}
+
+  .total{font-family:var(--ar-display);font-size:1.4rem;color:var(--lime);margin-bottom:.8rem;line-height:1.5}
+  .total strong{font-size:1.9rem;color:#fff}
+  .total .en{display:inline;font-family:var(--en);font-size:.8rem;color:#fff;opacity:.7;margin-inline-start:.5rem}
+  .msg{background:var(--strawberry);color:#fff;border-radius:14px;padding:.5rem 1rem;margin-bottom:.8rem;font-weight:600;line-height:1.6}
+  .msg .en{display:block;font-size:.82rem;font-weight:500}
+  /* visit */
+  .visit{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}
+  .visit dl{display:grid;grid-template-columns:auto 1fr;gap:.9rem 1.4rem;background:var(--white);padding:1.6rem;border-radius:28px;box-shadow:var(--shadow)}
+  .visit dt{font-family:var(--ar-display);font-weight:700;color:var(--strawberry);line-height:1.4}
+  .visit dt small{display:block;font-family:var(--en);font-size:.72rem;font-weight:600;color:var(--forest);opacity:.65;direction:ltr}
+  .visit dd{line-height:1.5}
+  .visit dd a{font-weight:600}
+  .visit dd .en{display:block;font-size:.85rem;opacity:.75}
+  .tagline{font-family:var(--ar-display);font-size:clamp(1.6rem,3.6vw,2.4rem);line-height:1.6}
+  .tagline .en{display:block;margin-top:.5rem;font-family:var(--en);font-size:1.05rem;font-weight:600;opacity:.8}
+
+  footer{background:var(--forest);color:#fff;text-align:center;padding:1.2rem;font-size:.92rem;margin-top:1rem}
+  footer .en{text-align:center;opacity:.85}
+
+  @media (max-width:820px){
+    .menu{grid-template-columns:1fr}
+  }
+  @media (max-width:780px){
+    .hero-card{grid-template-columns:1fr;min-height:0;border-radius:28px}
+    .art{display:none}
+    .delivery,.visit{grid-template-columns:1fr}
+    nav a:not(.call){display:none}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .hero h1{animation:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">ناصف</a>
+    <nav aria-label="القائمة الرئيسية / Main">
+      <a href="#menu">القائمة والطلب<small>Menu &amp; order</small></a>
+      <a href="#visit">زورنا<small>Visit</small></a>
+      <a class="call" href="tel:+201202882708">اتصل<small>Call</small></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero" aria-label="ناصف">
+    <div class="wrap">
+      <div class="hero-card">
+        <div>
+          <h1>ناصف</h1>
+          <p class="sub">عصائر طازجة، وسموذي، وقصب، وآيس كريم بأسعار تُرضي الجميع.</p>
+          <p class="en"><strong>Nassef.</strong> Fresh juices, smoothies, sugarcane and ice cream, at prices that stay easy.</p>
+          <div class="actions">
+            <a class="btn primary" href="#menu">اطلب الآن<small>Order now</small></a>
+            <a class="btn ghost" href="tel:+201202882708">01202882708<small>Call us</small></a>
+          </div>
+        </div>
+        <div class="art" aria-hidden="true">
+          <div class="cane"></div><div class="cane"></div><div class="cane"></div>
+          <div class="slice orange"></div>
+          <div class="slice lime"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="menu">
+    <div class="wrap">
+      <div class="head">
+        <h2>القائمة والطلب</h2>
+        <p class="en">Menu &amp; order</p>
+        <p class="howto">اكتب الكمية بجانب السعر ثم أرسل طلبك<span class="en">Type how many next to the price, then send</span></p>
+      </div>
+
+      <form id="orderForm" action="https://wa.me/201202882708" method="get" novalidate>
+
+        <!-- PRICES: the numbers below are placeholders in Egyptian pounds.
+             Replace each price both in the visible .price and in the input name="..." -->
+        <div class="menu">
+
+          <div class="col cane-col">
+            <h3>عصير القصب<span class="en">Sugarcane juice</span></h3>
+            <div class="cols"><span>الصنف<span class="en">Item</span></span><span>السعر<span class="en">Price</span></span><span>الكمية<span class="en">Qty</span></span></div>
+            <div class="items">
+              <label class="item"><span><b>قصب سادة</b><span class="en">Fresh pressed sugarcane</span></span><span class="price">15<small>ج.م</small></span><input type="number" name="Sugarcane plain - قصب سادة (15 EGP)" min="0" max="20" placeholder="0"></label>
+              <label class="item"><span><b>قصب بالليمون</b><span class="en">With lemon</span></span><span class="price">20<small>ج.م</small></span><input type="number" name="Sugarcane lemon - قصب بالليمون (20 EGP)" min="0" max="20" placeholder="0"></label>
+              <label class="item"><span><b>قصب بالنعناع</b><span class="en">With mint</span></span><span class="price">20<small>ج.م</small></span><input type="number" name="Sugarcane mint - قصب بالنعناع (20 EGP)" min="0" max="20" placeholder="0"></label>
+              <label class="item"><span><b>قصب بالزنجبيل</b><span class="en">With ginger</span></span><span class="price">20<small>ج.م</small></span><input type="number" name="Sugarcane ginger - قصب بالزنجبيل (20 EGP)" min="0" max="20" placeholder="0"></label>
+            </div>
+          </div>
+
+          <div class="col egy-col">
+            <h3>العصائر المصرية<span class="en">Egyptian juices</span></h3>
+            <div class="cols"><span>الصنف<span class="en">Item</span></span><span>السعر<span class="en">Price</span></span><span>الكمية<span class="en">Qty</span></span></div>
+            <div class="items">
+              <label class="item"><span><b>كركديه</b><span class="en">Karkadeh (hibiscus)</span></span><span class="price">15<small>ج.م</small></span><input type="number" name="Karkadeh - كركديه (15 EGP)" min="0" max="20" placeholder="0"></label>
+              <label class="item"><span><b>تمر هندي</b><span class="en">Tamarind</span></span><span class="price">15<small>ج.م</small></span><input type="number" name="Tamarind - تمر هندي (15 EGP)" min="0" max="20" placeholder="0"></label>
+              <label class="item"><span><b>سوبيا</b><span class="en">Sobia</span></span><span class="price">15<small>ج.م</small></span><input type="number" name="Sobia - سوبيا (15 EGP)" min="0" max="20" placeholder="0"></label>
+              <label class="item"><span><b>عرقسوس</b><span class="en">Licorice</span></span><span class="price">15<small>ج.م</small></span><input type="number" name="Licorice - عرقسوس (15 EGP)" min="0" max="20" placeholder="0"></label>
+              <label class="item"><span><b>مانجو</b><span class="en">Mango</span></span><span class="price">30<small>ج.م</small></span><input type="number" name="Mango juice - مانجو (30 EGP)" min="0" max="20" placeholder="0"></label>
+              <label class="item"><span><b>جوافة</b><span class="en">Guava</span></span><span class="price">25<small>ج.م</small></span><input type="number" name="Guava - جوافة (25 EGP)" min="0" max="20" placeholder="0"></label>
+            </div>
+          </div>
+
+          <div class="col smo-col">
+            <h3>السموذي<span class="en">Smoothies</span></h3>
+            <div class="cols"><span>الصنف<span class="en">Item</span></span><span>السعر<span class="en">Price</span></span><span>الكمية<span class="en">Qty</span></span></div>
+            <div class="items">
+              <label class="item"><span><b>سموذي مانجو</b><span class="en">Mango smoothie</span></span><span class="price">40<small>ج.م</small></span><input type="number" name="Smoothie mango - سموذي مانجو (40 EGP)" min="0" max="20" placeholder="0"></label>
+              <label class="item"><span><b>سموذي فراولة</b><span class="en">Strawberry smoothie</span></span><span class="price">40<small>ج.م</small></span><input type="number" name="Smoothie strawberry - سموذي فراولة (40 EGP)" min="0" max="20" placeholder="0"></label>
+              <label class="item"><span><b>سموذي موز</b><span class="en">Banana smoothie</span></span><span class="price">35<small>ج.م</small></span><input type="number" name="Smoothie banana - سموذي موز (35 EGP)" min="0" max="20" placeholder="0"></label>
+              <label class="item"><span><b>سموذي أفوكادو</b><span class="en">Avocado smoothie</span></span><span class="price">45<small>ج.م</small></span><input type="number" name="Smoothie avocado - سموذي أفوكادو (45 EGP)" min="0" max="20" placeholder="0"></label>
+              <label class="item"><span><b>سموذي توت مشكل</b><span class="en">Mixed berry smoothie</span></span><span class="price">45<small>ج.م</small></span><input type="number" name="Smoothie mixed berry - سموذي توت مشكل (45 EGP)" min="0" max="20" placeholder="0"></label>
+            </div>
+          </div>
+
+          <div class="col ice-col">
+            <h3>الآيس كريم<span class="en">Ice cream</span></h3>
+            <div class="cols"><span>الصنف<span class="en">Item</span></span><span>السعر<span class="en">Price</span></span><span>الكمية<span class="en">Qty</span></span></div>
+            <div class="items">
+              <label class="item"><span><b>فانيليا</b><span class="en">Vanilla</span></span><span class="price">15<small>ج.م</small></span><input type="number" name="Ice cream vanilla - فانيليا (15 EGP)" min="0" max="20" placeholder="0"></label>
+              <label class="item"><span><b>شوكولاتة</b><span class="en">Chocolate</span></span><span class="price">15<small>ج.م</small></span><input type="number" name="Ice cream chocolate - شوكولاتة (15 EGP)" min="0" max="20" placeholder="0"></label>
+              <label class="item"><span><b>فراولة</b><span class="en">Strawberry</span></span><span class="price">15<small>ج.م</small></span><input type="number" name="Ice cream strawberry - فراولة (15 EGP)" min="0" max="20" placeholder="0"></label>
+              <label class="item"><span><b>مانجو</b><span class="en">Mango</span></span><span class="price">15<small>ج.م</small></span><input type="number" name="Ice cream mango - مانجو (15 EGP)" min="0" max="20" placeholder="0"></label>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="delivery">
+          <h3>بيانات التوصيل<span class="en">Delivery details</span></h3>
+          <label class="field">الاسم<small>Name</small>
+            <input type="text" id="cName" required autocomplete="name"></label>
+          <label class="field">رقم الموبايل<small>Phone number</small>
+            <input type="tel" id="cPhone" required autocomplete="tel" inputmode="tel"></label>
+          <label class="field full">العنوان<small>Delivery address</small>
+            <textarea id="cAddress" required autocomplete="street-address"></textarea></label>
+          <div class="full">
+            <p class="total">الإجمالي: <strong id="totalNum">0</strong> ج.م <span class="en">Total (delivery not included)</span></p>
+            <p class="msg" id="msg" role="alert" hidden></p>
+            <button class="send" type="submit">أرسل الطلب عبر واتساب<small>Send order on WhatsApp</small></button>
+            <p class="fine">سيفتح واتساب والطلب مكتوب وجاهز للإرسال إلى ناصف. وللطلب الأسرع اتصل على 01202882708.
+              <span class="en">This opens WhatsApp with your order already writte
